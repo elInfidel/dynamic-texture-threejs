@@ -32,7 +32,14 @@ $(document).ready(function () {
               });
             object.material = material;
             scene.add(object);
-    });
+    },
+    function ( xhr ) {},
+	function ( err ) {
+        var geometry = new THREE.BoxGeometry(1,1,1);
+        var material = new THREE.MeshBasicMaterial( { map: texture } );
+        var cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+	});
 
     // Add a light to the scene
     var spotlight = new THREE.SpotLight(0xffffff);
