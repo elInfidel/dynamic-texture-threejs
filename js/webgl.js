@@ -19,7 +19,7 @@ $(document).ready(function () {
     var texture = new THREE.Texture(document.getElementById('canvas-target'));
     var loader = new THREE.OBJLoader();
     var loadedObj;
-    loader.setPath( "https://s3-ap-southeast-2.amazonaws.com/spiff-security-test/" );
+    loader.setPath( "https://s3-ap-southeast-2.amazonaws.com/liam-test-models/" );
     loader.load( 'spot_triangulated.obj', function ( object ) {
         loadedObj = object;
             var material = new THREE.MeshBasicMaterial({ map: texture });
