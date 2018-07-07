@@ -38,6 +38,7 @@ $(document).ready(function () {
         var geometry = new THREE.BoxGeometry(1,1,1);
         var material = new THREE.MeshBasicMaterial( { map: texture } );
         var cube = new THREE.Mesh(geometry, material);
+        loadedObj = cube;
         scene.add(cube);
 	});
 
